@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <!-- Gradientes Principais Neons com profundidade 3D -->
+    <linearGradient id="grad-cyan-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+
+    <linearGradient id="grad-magenta-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A85" />
+      <stop offset="100%" stop-color="#8A23EA" />
+    </linearGradient>
+
+    <linearGradient id="glass-card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2338" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0F121D" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="glass-reflection" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="code-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D0F17" />
+      <stop offset="100%" stop-color="#05060A" />
+    </linearGradient>
+
+    <!-- Sombras para Volume 3D e Profundidade Realista -->
+    <filter id="shadow-3d" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#080B14" flood-opacity="0.4" />
+    </filter>
+
+    <filter id="glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="glow-pink" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Clip Paths para Telas Curvadas / 3D -->
+    <clipPath id="browser-clip">
+      <rect x="0" y="40" width="560" height="340" rx="4" />
+    </clipPath>
+
+    <clipPath id="mobile-clip">
+      <rect x="0" y="0" width="130" height="260" rx="20" />
+    </clipPath>
+  </defs>
+
+  <!-- GRUPO PRINCIPAL DA COMPOSIÇÃO 3D ISOLADA -->
+  <g transform="translate(100, 80)">
+
+    <!-- 1. BASE ISOMÉTRICA DE SOMBRA / GLOW INFERIOR -->
+    <ellipse cx="400" cy="550" rx="350" ry="40" fill="#00E5FF" opacity="0.08" filter="url(#glow-cyan)" />
+    <ellipse cx="450" cy="540" rx="280" ry="35" fill="#FF2A85" opacity="0.1" filter="url(#glow-pink)" />
+
+    <!-- 2. CARD RETRO (Code Editor - Janela Secundária / Traseira) -->
+    <g transform="translate(40, 40) rotate(-4)" filter="url(#shadow-3d)">
+      <rect x="0" y="0" width="380" height="260" rx="12" fill="url(#code-bg)" stroke="#262C40" stroke-width="2" />
+      <!-- Header do Código -->
+      <path d="M 0 12 A 12 12 0 0 1 12 0 L 368 0 A 12 12 0 0 1 380 12 L 380 35 L 0 35 Z" fill="#141824" />
+      <circle cx="20" cy="18" r="4" fill="#FF5F56" />
+      <circle cx="34" cy="18" r="4" fill="#FFBD2E" />
+      <circle cx="48" cy="18" r="4" fill="#27C93F" />
+      <text x="70" y="22" fill="#52607A" font-size="11" font-family="monospace">App.jsx — Web Project</text>
+      
+      <!-- Linhas de Código Sintaxe Hilight -->
+      <g transform="translate(20, 50)" font-family="monospace" font-size="11">
+        <text x="0" y="15" fill="#FF2A85">&lt;template&gt;</text>
+        <text x="15" y="35" fill="#00E5FF">&lt;div <tspan fill="#8A23EA">class</tspan>=<tspan fill="#FFBD2E">"hero-container"</tspan>&gt;</text>
+        <text x="30" y="55" fill="#E2E8F0">&lt;Header <tspan fill="#00E5FF">responsive</tspan>=<tspan fill="#27C93F">{true}</tspan> /&gt;</text>
+        <text x="30" y="75" fill="#E2E8F0">&lt;HeroSection <tspan fill="#00E5FF">style</tspan>=<tspan fill="#FFBD2E">"3D-Glass"</tspan> /&gt;</text>
+        <text x="30" y="95" fill="#64748B">// Performance &amp; SEO 100%</text>
+        <text x="30" y="115" fill="#E2E8F0">&lt;FooterAnalytics /&gt;</text>
+        <text x="15" y="135" fill="#00E5FF">&lt;/div&gt;</text>
+        <text x="0" y="155" fill="#FF2A85">&lt;/template&gt;</text>
+      </g>
+    </g>
+
+    <!-- 3. BROWSER MONITORES PRINCIPAL (Desktop Frame 3D) -->
+    <g transform="translate(180, 80) rotate(2)" filter="url(#shadow-3d)">
+      <!-- Frame Externo -->
+      <rect x="0" y="0" width="560" height="380" rx="16" fill="url(#glass-card)" stroke="#3A4363" stroke-width="2" />
+      <rect x="1" y="1" width="558" height="378" rx="15" fill="none" stroke="url(#glass-reflection)" stroke-width="2" />
+
+      <!-- Barra do Navegador -->
+      <path d="M 0 16 A 16 16 0 0 1 16 0 L 544 0 A 16 16 0 0 1 560 16 L 560 40 L 0 40 Z" fill="#131722" />
+      <line x1="0" y1="40" x2="560" y2="40" stroke="#262C40" stroke-width="1" />
+      
+      <!-- Controles da Janela -->
+      <circle cx="24" cy="20" r="5" fill="#FF5F56" />
+      <circle cx="40" cy="20" r="5" fill="#FFBD2E" />
+      <circle cx="56" cy="20" r="5" fill="#27C93F" />
+
+      <!-- Barra de URL Pro -->
+      <rect x="140" y="10" width="280" height="20" rx="10" fill="#0A0C14" stroke="#1E2436" stroke-width="1" />
+      <text x="210" y="24" fill="#00E5FF" font-size="10" font-family="sans-serif" font-weight="600">🔒 https://agency-creative.design</text>
+
+      <!-- Conteúdo Interno da Tela de Design do Site -->
+      <g clip-path="url(#browser-clip)" transform="translate(0,0)">
+        <!-- Canvas Background -->
+        <rect x="0" y="40" width="560" height="340" fill="#0B0D14" />
+        
+        <!-- Header da Página Mockup -->
+        <rect x="30" y="60" width="80" height="14" rx="4" fill="url(#grad-cyan-blue)" />
+        <rect x="320" y="63" width="40" height="8" rx="3" fill="#3A4363" />
+        <rect x="375" y="63" width="40" height="8" rx="3" fill="#3A4363" />
+        <rect x="430" y="63" width="40" height="8" rx="3" fill="#3A4363" />
+        <rect x="485" y="58" width="50" height="18" rx="9" fill="url(#grad-magenta-purple)" />
+
+        <!-- Hero Mockup com Wireframes & Layout -->
+        <rect x="30" y="100" width="240" height="20" rx="4" fill="#FFFFFF" opacity="0.9" />
+        <rect x="30" y="128" width="180" height="12" rx="3" fill="#475569" />
+        <rect x="30" y="146" width="210" height="12" rx="3" fill="#334155" />
+
+        <!-- Botões de Ação Mockup -->
+        <rect x="30" y="175" width="100" height="32" rx="16" fill="url(#grad-cyan-blue)" />
+        <rect x="140" y="175" width="90" height="32" rx="16" fill="#1E2338" stroke="#3A4363" stroke-width="1" />
+
+        <!-- Card Visual do Mockup (lado direito) -->
+        <rect x="300" y="100" width="230" height="140" rx="12" fill="#151926" stroke="#283048" stroke-width="1" />
+        <circle cx="415" cy="150" r="35" fill="url(#grad-magenta-purple)" opacity="0.8" filter="url(#glow-pink)" />
+        <path d="M 320 220 L 370 180 L 420 200 L 470 160 L 510 210" fill="none" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Grid de Recursos (Bottom) -->
+        <rect x="30" y="260" width="150" height="90" rx="8" fill="#131722" stroke="#1E2436" stroke-width="1" />
+        <rect x="45" y="275" width="30" height="30" rx="6" fill="url(#grad-cyan-blue)" opacity="0.3" />
+        <rect x="85" y="280" width="80" height="8" rx="3" fill="#E2E8F0" />
+        <rect x="85" y="294" width="60" height="6" rx="2" fill="#64748B" />
+
+        <rect x="200" y="260" width="150" height="90" rx="8" fill="#131722" stroke="#1E2436" stroke-width="1" />
+        <rect x="215" y="275" width="30" height="30" rx="6" fill="url(#grad-magenta-purple)" opacity="0.3" />
+        <rect x="255" y="280" width="80" height="8" rx="3" fill="#E2E8F0" />
+        <rect x="255" y="294" width="60" height="6" rx="2" fill="#64748B" />
+
+        <rect x="370" y="260" width="160" height="90" rx="8" fill="#131722" stroke="#1E2436" stroke-width="1" />
+        <circle cx="400" cy="290" r="15" fill="#00E5FF" opacity="0.2" />
+        <rect x="425" y="280" width="80" height="8" rx="3" fill="#E2E8F0" />
+        <rect x="425" y="294" width="60" height="6" rx="2" fill="#64748B" />
+      </g>
+    </g>
+
+    <!-- 4. SMARTPHONE RESPONSIVO 3D (Sobreposição Frontal Direita) -->
+    <g transform="translate(620, 200) rotate(-6)" filter="url(#shadow-3d)">
+      <!-- Corpo do Celular -->
+      <rect x="0" y="0" width="140" height="270" rx="24" fill="#1A1F2C" stroke="#3A4363" stroke-width="3" />
+      <rect x="2" y="2" width="136" height="266" rx="22" fill="#0A0C14" />
+      
+      <!-- Notch/Câmera -->
+      <capsule cx="70" cy="12" rx="18" ry="4" fill="#1A1F2C" />
+
+      <!-- Conteúdo da Tela Mobile -->
+      <g clip-path="url(#mobile-clip)" transform="translate(5,5)">
+        <rect x="0" y="0" width="130" height="260" fill="#0D0F17" />
+        
+        <!-- Header Mobile -->
+        <rect x="12" y="20" width="40" height="8" rx="2" fill="url(#grad-cyan-blue)" />
+        <line x1="100" y1="22" x2="115" y2="22" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+        <line x1="100" y1="26" x2="115" y2="26" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+
+        <!-- Card Hero Mobile -->
+        <rect x="12" y="40" width="106" height="70" rx="8" fill="url(#glass-card)" stroke="#262C40" stroke-width="1" />
+        <circle cx="65" cy="65" r="15" fill="url(#grad-magenta-purple)" opacity="0.7" />
+        <rect x="20" y="90" width="90" height="6" rx="2" fill="#FFFFFF" />
+
+        <!-- Lista de UI Mobile -->
+        <rect x="12" y="120" width="106" height="35" rx="6" fill="#151926" />
+        <rect x="20" y="130" width="16" height="16" rx="4" fill="#00E5FF" />
+        <rect x="42" y="132" width="55" height="5" rx="2" fill="#E2E8F0" />
+        <rect x="42" y="140" width="35" height="4" rx="2" fill="#64748B" />
+
+        <rect x="12" y="162" width="106" height="35" rx="6" fill="#151926" />
+        <rect x="20" y="172" width="16" height="16" rx="4" fill="#FF2A85" />
+        <rect x="42" y="174" width="55" height="5" rx="2" fill="#E2E8F0" />
+        <rect x="42" y="182" width="35" height="4" rx="2" fill="#64748B" />
+
+        <rect x="12" y="204" width="106" height="35" rx="6" fill="#151926" />
+        <rect x="20" y="214" width="16" height="16" rx="4" fill="#8A23EA" />
+        <rect x="42" y="216" width="55" height="5" rx="2" fill="#E2E8F0" />
+      </g>
+    </g>
+
+    <!-- 5. ELEMENTOS FLUTUANTES 3D (Widget de Performance, Paleta & Ferramenta Caneta) -->
+
+    <!-- Card Flutuante 3D: Performance Score 100% (Esquerda) -->
+    <g transform="translate(100, 280) rotate(5)" filter="url(#shadow-3d)">
+      <rect x="0" y="0" width="150" height="75" rx="12" fill="#121622" stroke="#00E5FF" stroke-width="1.5" />
+      <circle cx="35" cy="38" r="20" fill="none" stroke="#262C40" stroke-width="4" />
+      <path d="M 35 18 A 20 20 0 1 1 17 48" fill="none" stroke="#00E5FF" stroke-width="4" stroke-linecap="round" filter="url(#glow-cyan)" />
+      <text x="25" y="42" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif">100%</text>
+      
+      <text x="68" y="32" fill="#FFFFFF" font-size="12" font-weight="bold" font-family="sans-serif">Speed</text>
+      <text x="68" y="48" fill="#00E5FF" font-size="10" font-family="sans-serif">SEO Optimized</text>
+    </g>
+
+    <!-- Widget Flutuante 3D: Paleta de Cores UI (Topo Direito) -->
+    <g transform="translate(520, 30) rotate(-8)" filter="url(#shadow-3d)">
+      <rect x="0" y="0" width="160" height="48" rx="24" fill="#161B29" stroke="#3A4363" stroke-width="1.5" />
+      <circle cx="28" cy="24" r="12" fill="#00E5FF" />
+      <circle cx="56" cy="24" r="12" fill="#8A23EA" />
+      <circle cx="84" cy="24" r="12" fill="#FF2A85" />
+      <circle cx="112" cy="24" r="12" fill="#FFBD2E" />
+      <!-- Seletor de Vetor -->
+      <circle cx="84" cy="24" r="15" fill="none" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+
+    <!-- Ícone Flutuante 3D: Pen Tool / Vetor (Centro Direita) -->
+    <g transform="translate(720, 100) rotate(12)" filter="url(#shadow-3d)">
+      <rect x="0" y="0" width="56" height="56" rx="16" fill="url(#grad-magenta-purple)" />
+      <!-- Pen Tool Vector Icon -->
+      <path d="M 18 38 L 22 28 L 34 16 C 36 14 39 14 41 16 C 43 18 43 21 41 23 L 29 35 Z" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" />
+      <circle cx="20" cy="36" r="2" fill="#FFFFFF" />
+    </g>
+
+    <!-- Partículas e Brilhos de Iluminação (Glow Sparkles) -->
+    <g opacity="0.8">
+      <!-- Sparkle Cyan -->
+      <path d="M 160 50 L 163 58 L 171 61 L 163 64 L 160 72 L 157 64 L 149 61 L 157 58 Z" fill="#00E5FF" filter="url(#glow-cyan)" />
+      <!-- Sparkle Pink -->
+      <path d="M 580 440 L 582 446 L 588 448 L 582 450 L 580 456 L 578 450 L 572 448 L 578 446 Z" fill="#FF2A85" filter="url(#glow-pink)" />
+      <!-- Esferas luminosas -->
+      <circle cx="120" cy="180" r="4" fill="#00E5FF" filter="url(#glow-cyan)" />
+      <circle cx="750" cy="380" r="5" fill="#FF2A85" filter="url(#glow-pink)" />
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,171 @@
+/* --- Reset da Página --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: "Montserrat", sans-serif;
+    --img-backgroud: url(../img/backgroud.svg);
+    --cor-header: rgb(10, 15, 25);
+}
+
+body {
+    max-width: 100%;
+    background: rgb(16, 24, 41);
+    font-family: var(--font-family);
+}
+
+/* --- Estilo do Cabeçalho (Bloco: header) --- */
+.header {
+    max-width: 100%;
+    background-color: var(--cor-header);
+    box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Elemento: container interno do cabeçalho */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0.5rem 1rem;
+    width: 100%;
+    height: auto;
+}
+
+/* Elemento: logo */
+.header__logo {
+    width: 250px !important;   
+    height: auto;       
+    object-fit: contain;
+}
+
+/*  Novo Bloco: menu */
+.menu {
+    display: flex;
+    align-items: center;
+    height: 0;
+}
+
+/* Elemento: checkbox */
+.menu__checkbox {
+    display: none;
+}
+
+/* Elemento: botão/label */
+.menu__button {
+    display: none;
+    cursor: pointer;
+    color: aliceblue;
+    user-select: none;
+}
+
+/* Elemento: ícone do Material Symbols */
+.menu__icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Elemento: lista de links  */
+.menu__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+}
+
+/* Elemento: item da lista */
+.menu__item {
+    border: 1px solid transparent;
+    transition: transform 0.3s;
+}
+
+.menu__item:hover {
+    border-image: linear-gradient(to right, #00E5FF, #8A23EA, #FF2A85) 1;
+    transform: translateY(-5px);
+}
+
+/* Elemento: link/âncora */
+.menu__link {
+    display: inline-block;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* --- Comportamento Responsivo (Mobile) */
+@media (max-width: 760px) {
+
+    .header {
+        position: relative; 
+    }
+
+    .header__container {
+        flex-direction: row; 
+        padding: 0.75rem 1rem;
+        position: relative;
+        z-index: 20;
+    }
+
+    /* Exibe o botão do hambúrguer no mobile */
+    .menu__button {
+        display: block;
+        z-index: 25;
+    }
+
+    /* Transforma a lista em uma extensão nativa do cabeçalho */
+    .menu__list {
+        position: absolute;
+        top: calc(100% + 5px); 
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        
+        background-color: var(--cor-header);
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 0 0 0.5rem 0.5rem;
+        border-top: none; 
+        
+        /* Esconde o menu com animação suave */
+        max-height:0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        z-index: 10;
+    }
+
+    .menu__item {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgb(23, 32, 53);
+        
+    }
+
+
+    .menu__item:hover {
+        transform: none;
+        border-image: linear-gradient(to right, #00E5FF, #8A23EA, #FF2A85) 1;
+    }
+
+    .menu__link {
+        padding: 1rem;
+    }
+
+    /* --- REGRA DE OURO DO BEM SEM JS --- */
+    .menu__checkbox:checked ~ .menu__list {
+        max-height: 300px; 
+    }
+
+    .menu__checkbox:checked + .menu__button .menu__icon {
+        transform: rotate(90deg);
+        color: #00E5FF;
+    }
+}
