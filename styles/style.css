@@ -9,10 +9,16 @@
     --font-family: "Montserrat", sans-serif;
     --img-backgroud: url(../img/backgroud.svg);
     --cor-header: rgb(10, 15, 25);
+
+    --cor-container: rgba(36, 49, 77, 0.9)
+    
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
+    min-height: 100vh;
     background: rgb(16, 24, 41);
     font-family: var(--font-family);
 }
@@ -101,6 +107,83 @@ body {
 }
 
 
+/*--- Bloco (Pagina) ---*/
+.main-content {
+    max-width: 80%;
+    margin:5.5rem auto;
+    gap: 1rem;
+    background-color: var(--cor-container);
+    box-shadow: 5px 10px 15px -3px rgba(211, 202, 202, 0.3);
+    border-radius: 1rem;
+
+    position: relative;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+}
+
+.main-content:hover {
+    transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.paginas-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 50vh;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+   
+    
+}
+
+
+.paginas-content__img {
+    max-width: 100%;
+    height: 500px;
+}
+
+h1 {
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+h1 span {
+    background-image: linear-gradient(90deg, #00E5FF, #8A23EA, #FF2A85);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    color:aliceblue;
+    font-size: 1rem;
+}
+
+p span {
+    background-image: linear-gradient(90deg, #00E5FF, #8A23EA, #FF2A85);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*Bloco footer*/
+.footer {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-header);
+}
+
+
+
 /* --- Comportamento Responsivo (Mobile) */
 @media (max-width: 760px) {
 
@@ -168,4 +251,28 @@ body {
         transform: rotate(90deg);
         color: #00E5FF;
     }
+
+
+    /* Responsividade da Main */
+    .paginas-content {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .main-content {
+        margin: 2.5rem auto;
+        min-height: 30vh;
+    }
+
+    .paginas-content__img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+
+
 }
