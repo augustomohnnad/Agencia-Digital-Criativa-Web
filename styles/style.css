@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --font-family: "Montserrat", sans-serif;
     --img-backgroud: url(../img/backgroud.svg);
@@ -109,9 +113,13 @@ body {
 
 /*--- Bloco (Pagina) ---*/
 .main-content {
+    display: block;
     max-width: 80%;
     margin:5.5rem auto;
-    gap: 1rem;
+   
+}
+
+.pg-card {
     background-color: var(--cor-container);
     box-shadow: 5px 10px 15px -3px rgba(211, 202, 202, 0.3);
     border-radius: 1rem;
@@ -121,26 +129,29 @@ body {
     z-index: 1;
 }
 
-.main-content:hover {
+.pg-card:hover {
     transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.paginas-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    min-height: 50vh;
+.home-section {
+    display: flex;
+    justify-content: space-between;
     align-content: center;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-   
+    width: 100%;
+    min-height: 50vh;
+    padding: 2rem;
     
 }
 
 
-.paginas-content__img {
+.home-section__article {
+    max-width: 100%;
+}
+
+
+.home-section__img {
     max-width: 100%;
     height: 500px;
 }
@@ -170,6 +181,39 @@ p span {
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+}
+
+.sobre-section {
+   display: block;
+   max-width: 100%;
+   margin:5.5rem auto;
+}
+
+.sobre-section__article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50vh;
+    padding: 2rem;
+}
+
+
+
+.sobre-section__img {
+    max-width: 100%;
+    height: 500px;
+}
+
+.sobre-section__title {
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.sobre-section__subtitle {
+    color:aliceblue;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 
@@ -254,25 +298,39 @@ p span {
 
 
     /* Responsividade da Main */
-    .paginas-content {
-        display: flex;
-        flex-direction: column;
-        
-    }
 
     .main-content {
         margin: 2.5rem auto;
         min-height: 30vh;
     }
 
-    .paginas-content__img {
+    .home-section {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+    .home-section__img {
         height: 200px;
     }
 
     h1 {
+        font-size: 1.25rem;
+    }
+
+    .sobre-section__title {
+    font-size: 1.25rem;
+}
+
+    .sobre-section__subtitle {
+        color:aliceblue;
+        font-weight: bold;
         font-size: 1.5rem;
     }
 
-
+    .sobre-section__img {
+        height: 200px;
+    }
 
 }
