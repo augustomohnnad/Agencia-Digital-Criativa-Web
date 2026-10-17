@@ -11,6 +11,7 @@
     <title>Criativa Web</title>
 </head>
 <body>
+     <!--Pagina Cabeçalho-->
     <header class="header">
         <section class="header__container">
             <img class="header__logo" src="./img/logo.svg" alt="Logo Criativa Web">
@@ -33,7 +34,7 @@
                         <a href="#sobre" class="menu__link">Sobre</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#Fale-conosco" class="menu__link">Fale Conosco</a>
+                        <a href="#fale-conosco" class="menu__link">Fale Conosco</a>
                     </li>
                 </ul>
             </nav>
@@ -41,7 +42,7 @@
     </header>
 
     <main class="main-content">
-
+        <!--Pagina Home-->
         <section class=" home-section">
             <article class= "home-section__article" id="home">
                 <h1 class="home-section__title">Bem-vindo à<br> Agência Criativa <span>Web</span></h1><br>
@@ -50,6 +51,7 @@
             <img class="home-section__img" src="./img/baner.svg" alt="">
         </section>
 
+        <!--Pagina Sobre-->
         <section class="sobre-section">
             <article class="sobre-section__article" id="sobre">
                 <h1 class="sobre-section__title">SOBRE A AGÊNCIA CRIATIVA WEB</h1>
@@ -63,6 +65,7 @@
             </article>
         </section>
 
+        <!--Pagina Serviços-->
         <section class="servico-section" id="servicos">
             <header class="servico-header">
                 <h1 class="servico-section__title">Nossos Serviços & Soluções Digitais</h1>
@@ -134,6 +137,49 @@
             </article>
                 
             
+        </section>
+
+        <!--Pagina Fale-conosco-->
+        <section class="contato-section" id="fale-conosco">
+            <p>Pronto para transformar a sua visão em uma plataforma digital de alto impacto?</p>
+            <form method="POST">
+                <div class="contato-section__dados">
+                    <label class="contato-section__label" for="nome">Nome: </label>
+                    <input class="contato-section__input" type="text" name="nome" id="nome" placeholder="Seu nome..." required >
+                </div>
+
+                <div class="contato-section__dados">
+                    <label class="contato-section__label" for="email">E-mail: </label>
+                    <input class="contato-section__input" type="email" name="email" id="email" placeholder="Exemplo@..." required>
+                </div>
+
+                <div class="contato-section__dados">
+                    <label class="contato-section__label" for="contato">Telefone: </label>
+                    <input class="contato-section__input" type="tel" name="ddd" id="ddd" placeholder="DDD" maxlength="2" title="apena os 2 numeros do DDD." required>
+
+                    <input class="contato-section__input" type="tel" name="telefone" id="telefone" placeholder="Numero" title="Apenas numero" maxlength="9">
+
+                    <label class="contato-section__label" for="whats">Este número também é WhatsApp: </label>
+                    <input class="contato-section__input" type="checkbox" name="whats" aria-valuemin="sim" title="Apenas marque se for WhatsApp">
+                </div>
+
+                <div class="contato-section__dados">
+                    <label class="contato-section__label" for="horario">Qual o Melhor dia e horario para contato? </label>
+                    <input class="contato-section__input" type="datetime-local" name="horario >
+                </div>
+
+                <div class="contato-section__dados">
+                    <label class="contato-section__label" for="motivo-contato">Fale um pouco sobre suas ideias</label>
+                    <textarea name="motivo-contato" id="motivo-contato" rows="6" cols="100" placeholder="Digite aqui alguma informação adicional..." ></textarea>
+                </div>
+
+                <div class="btn">
+                    <button class="contato-btn" type="button">Agendar Reunião</button>
+                    <button class="contato-btn" type="reset" >Limpar</button>
+                </div>
+                
+            </form>
+           
         </section>
     </main>
     <footer class="footer">

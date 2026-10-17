@@ -85,7 +85,7 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 30px;
+    gap: 1.5rem;
     padding: 0;
 }
 
@@ -318,6 +318,175 @@ body {
   font-weight: bold;
 }
 
+/*--- Bloco: Fale conosco ---*/
+.contato-section {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 3rem 2.5rem;
+  background-color: #111420;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+              0 0 20px rgba(138, 35, 234, 0.15);
+  color: #E2E8F0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+
+.contato-section > p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #00E5FF, #8A23EA, #FF2A85);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container de cada linha do formulário */
+.contato-section__dados {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+
+.contato-section__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #94A3B8;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+
+.contato-section__input:not([type="checkbox"]) {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: #0D0F17;
+  border: 1px solid #262C40;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+
+.contato-section__input:not([type="checkbox"]):focus {
+  outline: none;
+  border-color: #00E5FF;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+/* Placeholder Moderno */
+.contato-section__input::placeholder,
+textarea::placeholder {
+  color: #475569;
+}
+
+/* Organização específica para o campo de Telefone / DDD */
+.contato-section__dados input[type="tel"] {
+  display: inline-block;
+}
+
+#ddd {
+  width: 90px;
+  margin-bottom: 0.5rem;
+}
+
+#telefone {
+  margin-bottom: 1rem;
+}
+
+/* Ajuste específico para Checkbox do WhatsApp */
+.contato-section__dados input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #00E5FF;
+  cursor: pointer;
+  margin-top: 0.25rem;
+}
+
+/* Transformar a label do WhatsApp em linha horizontal com o checkbox */
+label[for="whats"] {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: #CBD5E1;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+
+textarea.contato-section__input, 
+textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0D0F17;
+  border: 1px solid #262C40;
+  border-radius: 0.5rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #8A23EA;
+  box-shadow: 0 0 10px rgba(138, 35, 234, 0.3);
+}
+
+
+.btn {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+
+.contato-btn {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  border: none;
+}
+
+
+.contato-btn[type="button"] {
+  background: linear-gradient(90deg, #FF2A85, #8A23EA, #00E5FF);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(138, 35, 234, 0.4);
+}
+
+.contato-btn[type="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+  
+}
+
+/* Botão Secundário: Limpar */
+.contato-btn[type="reset"] {
+  background-color: transparent;
+  border: 1px solid #3A4363;
+  color: #94A3B8;
+}
+
+.contato-btn[type="reset"]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  border-color: #94A3B8;
+}
+
+
+
 /*Bloco footer*/
 .footer {
     display: flex;
@@ -465,4 +634,22 @@ body {
     .servico-card {
         width: 100%; 
     }
+
+    /* responsividad seção fale conosco*/
+
+    .contato-section {
+    padding: 1.5rem 1rem;
+    margin: 2rem 1rem;
+  }
+  
+  .contato-section > p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+
+
+
 }
