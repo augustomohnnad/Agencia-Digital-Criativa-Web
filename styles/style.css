@@ -329,7 +329,6 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
               0 0 20px rgba(138, 35, 234, 0.15);
   color: #E2E8F0;
-  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 
@@ -486,8 +485,63 @@ textarea:focus {
 }
 
 
+.comentarios-section {
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 5rem auto;
+  padding: 3rem 2.5rem;
+}
 
-/*Bloco footer*/
+.comentarios-grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.5rem;
+  padding: 3.5rem auto;
+  
+}
+
+.comentarios-card  {
+  
+  background-color: #111420;
+  text-align: start;
+  width:100%;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+              0 0 20px rgba(138, 35, 234, 0.15);
+  color: #E2E8F0;
+  
+}
+
+.comentarios-card__img {
+  margin: 0.5rem;
+  width: 50px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#111420, #111420), 
+                    linear-gradient(40deg, #00E5FF, #8A23EA, #FF2A85);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.comentarios-card__header{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;  
+}
+
+.comentarios-card__small {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #00E5FF;
+}
+
 .footer {
     display: flex;
     flex-grow: 1;
@@ -499,7 +553,7 @@ textarea:focus {
 
 
 
-/* --- Responsividade (Mobile) */
+/* --- Responsividade (Mobile e tablets) */
 @media screen and (min-width: 360px) and (max-width: 928px) {
 
     .header {
@@ -578,9 +632,9 @@ textarea:focus {
     }
 
     .home-section__img {
-        height: 250px;
+        height: 400px;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .home-section__title {
@@ -605,9 +659,10 @@ textarea:focus {
     }
 
     .sobre-section__img {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
+        height: 400px;
+        max-width: 100%;
+        object-fit:contain;
+        
     }
 
     /* --- Responsividade da Seção Serviços --- */
@@ -648,6 +703,32 @@ textarea:focus {
 
   .btn {
     flex-direction: column;
+  }
+
+  /*Responsividade seção Depoimentos*/
+
+  .comentarios-section {
+    width: 100%;
+    
+  }
+
+  .comentarios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .comentarios-card {
+    padding: 1rem;
+    
+  }
+
+  .comentarios-card__header {
+    font-size: 1rem;
+  }
+
+  .comentarios-card__small {
+    font-size: 1rem;
   }
 
 
