@@ -6,17 +6,16 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>Criativa Web</title>
+    <title>Agência Criativa Web</title>
 </head>
 <body>
-     <!-- Página Cabeçalho -->
+    <!-- Cabeçalho Principal -->
     <header class="header">
-        <section class="header__container">
-            <img class="header__logo" src="./img/logo.svg" alt="Logo Criativa Web">
+        <div class="header__container">
+            <img class="header__logo" src="./img/logo.svg" alt="Logo Agência Criativa Web">
 
-            <!-- Novo Bloco Autônomo: menu -->
             <nav class="menu" aria-label="Navegação principal">
                 <input type="checkbox" id="menu-toggle" class="menu__checkbox">
                 <label for="menu-toggle" class="menu__button" aria-label="Abrir menu">
@@ -24,202 +23,185 @@
                 </label>
                 
                 <ul class="menu__list">
-                    <li class="menu__item">
-                        <a href="#home" class="menu__link menu__link--active">Home</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#servicos" class="menu__link">Serviços</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#sobre" class="menu__link">Sobre</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#fale-conosco" class="menu__link">Fale Conosco</a>
-                    </li>
-                     <li class="menu__item">
-                        <a href="#comentarios" class="menu__link">Depoimentos</a>
-                    </li>
+                    <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="#servicos" class="menu__link">Serviços</a></li>
+                    <li class="menu__item"><a href="#sobre" class="menu__link">Sobre</a></li>
+                    <li class="menu__item"><a href="#fale-conosco" class="menu__link">Fale Conosco</a></li>
+                    <li class="menu__item"><a href="#comentarios" class="menu__link">Depoimentos</a></li>
                 </ul>
             </nav>
-        </section>
+        </div>
     </header>
 
     <main class="main-content">
-        <!-- Página Home -->
-        <section class="home-section">
-            <article class="home-section__article" id="home">
-                <h1 class="home-section__title">Bem-vindo à<br> Agência Criativa <span>Web</span></h1><br>
+        <!-- Seção Home / Hero -->
+        <section class="home-section" id="home">
+            <article class="home-section__article">
+                <h1 class="home-section__title">Bem-vindo à<br> Agência Criativa <span>Web</span></h1>
                 <p class="home-section__texto">Transformamos ideias em <span>experiências digitais extraordinárias</span>. Explore soluções criativas, design moderno e tecnologia desenvolvida para levar o seu negócio mais longe. O próximo passo para a sua presença digital começa aqui!</p>
             </article>
             <img class="home-section__img" 
                  src="./img/baner.svg" 
-                 srcset="./img/baner.svg 480w, ./img/baner.svg 1200w" 
+                 srcset="./img/baner-small.svg 480w, ./img/baner.svg 1200w" 
                  sizes="(max-width: 600px) 480px, 1200px" 
-                 alt="Banner principal da Agência Criativa Web">
+                 alt="Ilustração abstrata representando desenvolvimento web e inovação">
         </section>
 
-        <!-- Página Sobre -->
-        <section class="sobre-section">
-            <article class="sobre-section__article" id="sobre">
-                <h1 class="sobre-section__title">SOBRE A AGÊNCIA CRIATIVA WEB</h1>
-                <p class="sobre-section__text">Somos uma agência digital focada em criar ecossistemas web de alta performance. Combinamos arquiteturas de código robustas em <strong>Node.js, React e Next.js com interfaces UI/UX</strong> focadas em conversão.</p><br>
+        <!-- Seção Sobre -->
+        <section class="sobre-section" id="sobre">
+            <article class="sobre-section__article">
+                <h2 class="sobre-section__title">SOBRE A AGÊNCIA CRIATIVA WEB</h2>
+                <p class="sobre-section__text">Somos uma agência digital focada em criar ecossistemas web de alta performance. Combinamos arquiteturas de código robustas em <strong>Node.js, React e Next.js com interfaces UI/UX</strong> focadas em conversão.</p>
 
-                <h2 class="sobre-section__subtitle">Reconstruindo a presença digital com excelência técnica.</h2> 
+                <h3 class="sobre-section__subtitle">Reconstruindo a presença digital com excelência técnica.</h3> 
                 <p class="sobre-section__text">A Agência Criativa WEB nasceu da necessidade de eliminar a divisão entre design atraente e código de alta performance. Muitas empresas sofrem com sites bonitos, mas lentos e difíceis de manter, ou sistemas rápidos com interfaces ultrapassadas e confusas. A nossa missão é unir o melhor dos dois mundos: construímos interfaces modernas e intuitivas no Figma e transformamo-las em código limpo, escalável e otimizado para SEO.</p>
 
                 <img class="sobre-section__img" 
                      src="./img/img-s0bre.svg" 
-                     srcset="./img/img-s0bre.svg 480w, ./img/img-s0bre.svg 1200w" 
+                     srcset="./img/img-s0bre-small.svg 480w, ./img/img-s0bre.svg 1200w" 
                      sizes="(max-width: 600px) 480px, 1200px" 
-                     alt="Ilustração sobre a equipe da Agência Criativa Web">
+                     alt="Equipe colaborando em projetos de engenharia web">
             </article>
         </section>
 
-        <!-- Página Serviços -->
+        <!-- Seção Serviços -->
         <section class="servico-section" id="servicos">
-            <header class="servico-header">
-                <h1 class="servico-section__title">Nossos Serviços & Soluções Digitais</h1>
+            <div class="servico-header">
+                <h2 class="servico-section__title">Nossos Serviços & Soluções Digitais</h2>
                 <p class="servico-section__texto">
-                    Na Agência Criativa WEB, transformamos a complexidade do desenvolvimento web em soluções elegantes, rápidas e focadas em resultados. Unimos a engenharia de software de alta performance (Clean Code) ao design estratégico de interfaces (UI/UX) para construir ecossistemas digitais escaláveis.
+                    Na Agência Criativa WEB, transformamos a complexidade do desenvolvimento web em soluções elegantes, rápidas e focadas em resultados. Unimos a engenharia de software de alta performance (Clean Code) ao design estratégico de interfaces (UI/UX).
                 </p>
-            </header>
+            </div>
 
             <div class="servico-grid">
-                <div class="servico-card">
-                    <article class="servico-card__article">
-                        <header>
-                            <h2 class="servico-card__title">UI/UX Design & Prototipagem</h2>
-                        </header>
-                        <small class="servico-card__caption">Interfaces intencionais que encantam e convertem.</small>
-                        <ol class="servico-card__list">
+                <article class="servico-card">
+                    <div>
+                        <h3 class="servico-card__title">UI/UX Design & Prototipagem</h3>
+                        <span class="servico-card__caption">Interfaces intencionais que encantam e convertem.</span>
+                        <ul class="servico-card__list">
                             <li>Design de Interfaces (UI) moderno, exclusivo e adaptado à identidade da sua marca.</li>
                             <li>Pesquisa e Arquitetura de Informação (UX) para garantir jornadas intuitivas e fluidas.</li>
                             <li>Prototipagem interativa e sistemas de design (Design Systems) completos no Figma.</li>
-                        </ol>
-                    </article>
-                </div>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="servico-card">
-                    <article class="servico-card__article">
-                        <header>
-                            <h2 class="servico-card__title">Desenvolvimento Full-Stack</h2>
-                        </header>
-                        <small class="servico-card__caption">Aplicações robustas, seguras e preparadas para crescer.</small>
-                        <ol class="servico-card__list">
-                            <li>Construção de sites e ecossistemas web com as tecnologias mais modernas do mercado (React, Next.js e Node.js).</li>
-                            <li>Arquitetura de código limpo (Clean Architecture e princípios SOLID), facilitando manutenções e futuras evoluções.</li>
+                <article class="servico-card">
+                    <div>
+                        <h3 class="servico-card__title">Desenvolvimento Full-Stack</h3>
+                        <span class="servico-card__caption">Aplicações robustas, seguras e preparadas para crescer.</span>
+                        <ul class="servico-card__list">
+                            <li>Construção de sites e ecossistemas web com as tecnologias mais modernas (React, Next.js e Node.js).</li>
+                            <li>Arquitetura de código limpo (Clean Architecture e princípios SOLID), facilitando manutenções.</li>
                             <li>Integração e criação de APIs RESTful eficientes e gestão otimizada de bases de dados.</li>
-                        </ol>
-                    </article>
-                </div>
+                        </ul>
+                    </div>
+                </article>
 
-                <div class="servico-card">
-                    <article class="servico-card__article">
-                        <header>
-                            <h2 class="servico-card__title">Performance & SEO Otimizado</h2>
-                        </header>
-                        <small class="servico-card__caption">Visibilidade máxima no Google e carregamento ultrarrápido.</small>
-                        <ol class="servico-card__list">
+                <article class="servico-card">
+                    <div>
+                        <h3 class="servico-card__title">Performance & SEO Otimizado</h3>
+                        <span class="servico-card__caption">Visibilidade máxima no Google e carregamento ultrarrápido.</span>
+                        <ul class="servico-card__list">
                             <li>Otimização de tempo de resposta e performance com pontuações elevadas no Google Lighthouse.</li>
-                            <li>Estruturação técnica focada em SEO (Search Engine Optimization) para posicionar o seu negócio no topo das pesquisas.</li>
-                            <li>Desenvolvimento 100% Responsive / Mobile-First, garantindo uma navegação impecável em qualquer dispositivo.</li>
-                        </ol>
-                    </article>
-                </div>
+                            <li>Estruturação técnica focada em SEO para posicionar o seu negócio no topo das pesquisas.</li>
+                            <li>Desenvolvimento 100% Responsivo / Mobile-First, garantindo navegação impecável.</li>
+                        </ul>
+                    </div>
+                </article>
             </div> 
 
             <article class="servico-section__article">
-                <h2 class="servico-section__title">A Nossa Metodologia</h2>
-                <ol class="servico-section__texto servico-card__list">
+                <h3 class="servico-section__title">A Nossa Metodologia</h3>
+                <ul class="servico-section__texto servico-card__list">
                     <li>Imersão & Estratégia: Mapeamos os objetivos do seu negócio, público-alvo e requisitos técnicos.</li>
-                    <li>Design & Protótipo: Criamos e validamos a interface visual antes de escrever a primeira linha de código.</li>
-                    <li>Desenvolvimento em Sprints: Construímos o projeto com entregas transparentes, código testado e arquitetura sólida.</li>
-                    <li>Otimização & Lançamento: Realizamos testes de performance, segurança e SEO antes da colocação em produção.</li>
-                </ol>
-            </article>
-
-            <article class="servico-section__article">
-                <h2 class="servico-section__title">Vamos Construir o Seu Próximo Projeto?</h2>
-                <p class="servico-section__texto">
-                    Quer precise de criar um site do zero, redesenhar uma plataforma existente ou desenvolver uma aplicação web sob medida, temos a engenharia e o design ideais para a sua empresa.
-                </p>
+                    <li>Design & Protótipo: Criamos e validamos a interface visual antes de escrever código.</li>
+                    <li>Desenvolvimento em Sprints: Construímos o projeto com entregas transparentes e arquitetura sólida.</li>
+                    <li>Otimização & Lançamento: Realizamos testes de performance, segurança e SEO antes de produção.</li>
+                </ul>
             </article>
         </section>
 
-        <!-- Página Fale-conosco -->
+        <!-- Seção Fale Conosco -->
         <section class="contato-section" id="fale-conosco">
-            <p>Pronto para transformar a sua visão em uma plataforma digital de alto impacto?</p>
-            <form method="POST">
+            <h2 class="contato-section__heading">Pronto para transformar a sua visão em uma plataforma digital de alto impacto?</h2>
+            
+            <form method="POST" class="contato-section__form">
                 <div class="contato-section__dados">
-                    <label class="contato-section__label" for="nome">Nome: </label>
-                    <input class="contato-section__input" type="text" name="nome" id="nome" placeholder="Seu nome..." required>
+                    <label class="contato-section__label" for="nome">Nome:</label>
+                    <input class="contato-section__input" type="text" name="nome" id="nome" placeholder="Seu nome completo..." required>
                 </div>
 
                 <div class="contato-section__dados">
-                    <label class="contato-section__label" for="email">E-mail: </label>
-                    <input class="contato-section__input" type="email" name="email" id="email" placeholder="Exemplo@..." required>
+                    <label class="contato-section__label" for="email">E-mail:</label>
+                    <input class="contato-section__input" type="email" name="email" id="email" placeholder="seu.email@exemplo.com" required>
                 </div>
 
+                <fieldset class="contato-section__dados" style="border: none; padding: 0; margin: 0 0 1.25rem 0;">
+                    <legend style="display: none;">Informações de Contato Telefônico</legend>
+                    <label class="contato-section__label" for="DDD">Telefone:</label>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input class="contato-section__input contato-section__input--DDD" type="tel" name="ddd" id="ddd" placeholder="DDD" maxlength="2" required>
+                        <input class="contato-section__input contato-section__input--tel" type="tel" name="telefone" id="telefone" placeholder="Número" maxlength="9">
+                    </div>
+
+                    <div class="contato-section__checkbox-wrapper">
+                        <input class="contato-section__checkbox" type="checkbox" name="whats" id="whats">
+                        <label for="whats">Este número também é WhatsApp</label>
+                    </div>
+                </fieldset>
+
                 <div class="contato-section__dados">
-                    <label class="contato-section__label" for="contato">Telefone: </label>
-                    <input class="contato-section__input" type="tel" name="ddd" id="ddd" placeholder="DDD" maxlength="2" title="apenas os 2 numeros do DDD." required>
-
-                    <input class="contato-section__input" type="tel" name="telefone" id="telefone" placeholder="Numero" title="Apenas numero" maxlength="9">
-
-                    <label class="contato-section__label" for="whats">Este número também é WhatsApp: </label>
-                    <input class="contato-section__input" type="checkbox" name="whats" id="whats" title="Apenas marque se for WhatsApp">
-                </div>
-
-                <div class="contato-section__dados">
-                    <label class="contato-section__label" for="horario">Qual o Melhor dia e horario para contato? </label>
+                    <label class="contato-section__label" for="horario">Qual o melhor dia e horário para contato?</label>
                     <input class="contato-section__input" type="datetime-local" name="horario" id="horario">
                 </div>
 
                 <div class="contato-section__dados">
                     <label class="contato-section__label" for="motivo-contato">Fale um pouco sobre suas ideias</label>
-                    <textarea name="motivo-contato" id="motivo-contato" rows="6" placeholder="Digite aqui alguma informação adicional..."></textarea>
+                    <textarea class="contato-section__input contato-section__textarea" name="motivo-contato" id="motivo-contato" rows="6" placeholder="Digite aqui informações adicionais sobre o projeto..."></textarea>
                 </div>
 
-                <div class="btn">
-                    <button class="contato-btn" type="submit">Agendar Reunião</button>
-                    <button class="contato-btn" type="reset">Limpar</button>
+                <div class="contato-section__actions">
+                    <button class="contato-section__btn contato-section__btn--submit" type="submit">Agendar Reunião</button>
+                    <button class="contato-section__btn contato-section__btn--reset" type="reset">Limpar</button>
                 </div>
             </form>
         </section>
 
-        <!-- Página Depoimentos -->
-        <section class="comentarios-section">
-            <div class="comentarios-grid" id="comentarios">
+        <!-- Seção Depoimentos -->
+        <section class="comentarios-section" id="comentarios">
+            <div class="comentarios-grid">
                 <article class="comentarios-card">
                     <header class="comentarios-card__header">
                         <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=8" alt="Foto de Jack Santos">
-                        <p class="comentarios-card__nome">Jack Santos</p>
+                        <h3 class="comentarios-card__nome">Jack Santos</h3>
                     </header>
-                    <small class="comentarios-card__small">“A Criativa Web conseguiu transformar minha ideia em um projeto profissional.”</small>
+                    <p class="comentarios-card__small">“A Criativa Web conseguiu transformar minha ideia em um projeto profissional.”</p>
                 </article>
 
                 <article class="comentarios-card">
                     <header class="comentarios-card__header">
                         <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=3" alt="Foto de Ricardo Breviate">
-                        <p class="comentarios-card__nome">Ricardo Breviate</p>
+                        <h3 class="comentarios-card__nome">Ricardo Breviate</h3>
                     </header>
-                    <small class="comentarios-card__small">“O atendimento foi excelente e o resultado superou minhas expectativas.”</small>
+                    <p class="comentarios-card__small">“O atendimento foi excelente e o resultado superou minhas expectativas.”</p>
                 </article>
 
                 <article class="comentarios-card">
                     <header class="comentarios-card__header">
                         <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=5" alt="Foto de Paula Macedo">
-                        <p class="comentarios-card__nome">Paula Macedo</p>
+                        <h3 class="comentarios-card__nome">Paula Macedo</h3>
                     </header>
-                    <small class="comentarios-card__small">“Meu site ficou moderno, rápido e muito mais atrativo.”</small>
+                    <p class="comentarios-card__small">“Meu site ficou moderno, rápido e muito mais atrativo.”</p>
                 </article>
             </div>
         </section>
     </main>
 
+    <!-- Rodapé Profissional -->
     <footer class="footer">
         <div class="footer__content">
-            <p>&copy; Desenvolvido por Augusto Silveira | Agência Criativa Web</p>
+            <p>&copy; 2026 Desenvolvido por Augusto Silveira | Agência Criativa Web</p>
             <p>Endereço: Av. Tecnológica, 1000 - São Paulo, SP | Tel: (11) 99999-9999 | E-mail: contato@agenciacriativaweb.com.br</p>
         </div>
     </footer>
