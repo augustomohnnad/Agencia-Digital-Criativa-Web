@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
     <title>Criativa Web</title>
 </head>
 <body>
-     <!--Pagina Cabeçalho-->
+     <!-- Página Cabeçalho -->
     <header class="header">
         <section class="header__container">
             <img class="header__logo" src="./img/logo.svg" alt="Logo Criativa Web">
@@ -34,7 +34,7 @@
                         <a href="#sobre" class="menu__link">Sobre</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#comentarios" class="menu__link">Fale Conosco</a>
+                        <a href="#fale-conosco" class="menu__link">Fale Conosco</a>
                     </li>
                      <li class="menu__item">
                         <a href="#comentarios" class="menu__link">Depoimentos</a>
@@ -45,30 +45,37 @@
     </header>
 
     <main class="main-content">
-        <!--Pagina Home-->
-        <section class=" home-section">
-            <article class= "home-section__article" id="home">
+        <!-- Página Home -->
+        <section class="home-section">
+            <article class="home-section__article" id="home">
                 <h1 class="home-section__title">Bem-vindo à<br> Agência Criativa <span>Web</span></h1><br>
-                <p class="home-section__texto">Transformamos ideias em <span>experiências digitais extraordinárias</span>. Explore soluções criativas, design moderno e tecnologia desenvolvida para levar o seu negócio mais longe. O próximo passo para a sua presença digital começa aqui!.</p>
+                <p class="home-section__texto">Transformamos ideias em <span>experiências digitais extraordinárias</span>. Explore soluções criativas, design moderno e tecnologia desenvolvida para levar o seu negócio mais longe. O próximo passo para a sua presença digital começa aqui!</p>
             </article>
-            <img class="home-section__img" src="./img/baner.svg" alt="">
+            <img class="home-section__img" 
+                 src="./img/baner.svg" 
+                 srcset="./img/baner.svg 480w, ./img/baner.svg 1200w" 
+                 sizes="(max-width: 600px) 480px, 1200px" 
+                 alt="Banner principal da Agência Criativa Web">
         </section>
 
-        <!--Pagina Sobre-->
+        <!-- Página Sobre -->
         <section class="sobre-section">
             <article class="sobre-section__article" id="sobre">
                 <h1 class="sobre-section__title">SOBRE A AGÊNCIA CRIATIVA WEB</h1>
-                <p class="sobre-section__text">Somos uma agência digital focada em criar ecossistemas web de alta performance. Combinamos arquiteturas de código robustas em <strong> Node.js, React e Next.js com interfaces UI/UX </strong> focadas em conversão.</p><br>
+                <p class="sobre-section__text">Somos uma agência digital focada em criar ecossistemas web de alta performance. Combinamos arquiteturas de código robustas em <strong>Node.js, React e Next.js com interfaces UI/UX</strong> focadas em conversão.</p><br>
 
                 <h2 class="sobre-section__subtitle">Reconstruindo a presença digital com excelência técnica.</h2> 
-                <p class="sobre-section__text">A Agência Criativa WEB nasceu da necessidade de eliminar a divisão entre design atraente e código de alta performance. Muitas empresas sofrem com sites bonitos, mas lentos e difíceis de manter, ou sistemas rápidos com interfaces ultrapassadas e confusas.
-                A nossa missão é unir o melhor dos dois mundos: construímos interfaces modernas e intuitivas no Figma e transformamo-las em código limpo, escalável e otimizado para SEO.</p>
+                <p class="sobre-section__text">A Agência Criativa WEB nasceu da necessidade de eliminar a divisão entre design atraente e código de alta performance. Muitas empresas sofrem com sites bonitos, mas lentos e difíceis de manter, ou sistemas rápidos com interfaces ultrapassadas e confusas. A nossa missão é unir o melhor dos dois mundos: construímos interfaces modernas e intuitivas no Figma e transformamo-las em código limpo, escalável e otimizado para SEO.</p>
 
-                <img class="sobre-section__img" src="./img/img-s0bre.svg" alt="">
+                <img class="sobre-section__img" 
+                     src="./img/img-s0bre.svg" 
+                     srcset="./img/img-s0bre.svg 480w, ./img/img-s0bre.svg 1200w" 
+                     sizes="(max-width: 600px) 480px, 1200px" 
+                     alt="Ilustração sobre a equipe da Agência Criativa Web">
             </article>
         </section>
 
-        <!--Pagina Serviços-->
+        <!-- Página Serviços -->
         <section class="servico-section" id="servicos">
             <header class="servico-header">
                 <h1 class="servico-section__title">Nossos Serviços & Soluções Digitais</h1>
@@ -77,9 +84,7 @@
                 </p>
             </header>
 
-        <!-- 2. Grid exclusivo para os Cards -->
             <div class="servico-grid">
-                
                 <div class="servico-card">
                     <article class="servico-card__article">
                         <header>
@@ -121,7 +126,8 @@
                         </ol>
                     </article>
                 </div>
-            </div>   
+            </div> 
+
             <article class="servico-section__article">
                 <h2 class="servico-section__title">A Nossa Metodologia</h2>
                 <ol class="servico-section__texto servico-card__list">
@@ -138,17 +144,15 @@
                     Quer precise de criar um site do zero, redesenhar uma plataforma existente ou desenvolver uma aplicação web sob medida, temos a engenharia e o design ideais para a sua empresa.
                 </p>
             </article>
-                
-            
         </section>
 
-        <!--Pagina Fale-conosco-->
+        <!-- Página Fale-conosco -->
         <section class="contato-section" id="fale-conosco">
             <p>Pronto para transformar a sua visão em uma plataforma digital de alto impacto?</p>
             <form method="POST">
                 <div class="contato-section__dados">
                     <label class="contato-section__label" for="nome">Nome: </label>
-                    <input class="contato-section__input" type="text" name="nome" id="nome" placeholder="Seu nome..." required >
+                    <input class="contato-section__input" type="text" name="nome" id="nome" placeholder="Seu nome..." required>
                 </div>
 
                 <div class="contato-section__dados">
@@ -158,46 +162,45 @@
 
                 <div class="contato-section__dados">
                     <label class="contato-section__label" for="contato">Telefone: </label>
-                    <input class="contato-section__input" type="tel" name="ddd" id="ddd" placeholder="DDD" maxlength="2" title="apena os 2 numeros do DDD." required>
+                    <input class="contato-section__input" type="tel" name="ddd" id="ddd" placeholder="DDD" maxlength="2" title="apenas os 2 numeros do DDD." required>
 
                     <input class="contato-section__input" type="tel" name="telefone" id="telefone" placeholder="Numero" title="Apenas numero" maxlength="9">
 
                     <label class="contato-section__label" for="whats">Este número também é WhatsApp: </label>
-                    <input class="contato-section__input" type="checkbox" name="whats" aria-valuemin="sim" title="Apenas marque se for WhatsApp">
+                    <input class="contato-section__input" type="checkbox" name="whats" id="whats" title="Apenas marque se for WhatsApp">
                 </div>
 
                 <div class="contato-section__dados">
                     <label class="contato-section__label" for="horario">Qual o Melhor dia e horario para contato? </label>
-                    <input class="contato-section__input" type="datetime-local" name="horario >
+                    <input class="contato-section__input" type="datetime-local" name="horario" id="horario">
                 </div>
 
                 <div class="contato-section__dados">
                     <label class="contato-section__label" for="motivo-contato">Fale um pouco sobre suas ideias</label>
-                    <textarea name="motivo-contato" id="motivo-contato" rows="6" cols="100" placeholder="Digite aqui alguma informação adicional..." ></textarea>
+                    <textarea name="motivo-contato" id="motivo-contato" rows="6" placeholder="Digite aqui alguma informação adicional..."></textarea>
                 </div>
 
                 <div class="btn">
-                    <button class="contato-btn" type="button">Agendar Reunião</button>
-                    <button class="contato-btn" type="reset" >Limpar</button>
+                    <button class="contato-btn" type="submit">Agendar Reunião</button>
+                    <button class="contato-btn" type="reset">Limpar</button>
                 </div>
-                
             </form>
-           
         </section>
 
-        <section class="comentarios-section" >
+        <!-- Página Depoimentos -->
+        <section class="comentarios-section">
             <div class="comentarios-grid" id="comentarios">
-                    <article class="comentarios-card">
-                        <header class="comentarios-card__header">
-                            <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=8" alt="">
-                            <p class="comentarios-card__nome">Jack Santos</p>
-                        </header>
-                        <small class="comentarios-card__small">“A Criativa Web conseguiu transformar minha ideia em um projeto profissional.”</small>
+                <article class="comentarios-card">
+                    <header class="comentarios-card__header">
+                        <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=8" alt="Foto de Jack Santos">
+                        <p class="comentarios-card__nome">Jack Santos</p>
+                    </header>
+                    <small class="comentarios-card__small">“A Criativa Web conseguiu transformar minha ideia em um projeto profissional.”</small>
                 </article>
 
                 <article class="comentarios-card">
                     <header class="comentarios-card__header">
-                        <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=3" alt="">
+                        <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=3" alt="Foto de Ricardo Breviate">
                         <p class="comentarios-card__nome">Ricardo Breviate</p>
                     </header>
                     <small class="comentarios-card__small">“O atendimento foi excelente e o resultado superou minhas expectativas.”</small>
@@ -205,19 +208,20 @@
 
                 <article class="comentarios-card">
                     <header class="comentarios-card__header">
-                        <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=5" alt="">
+                        <img class="comentarios-card__img" src="https://i.pravatar.cc/150?img=5" alt="Foto de Paula Macedo">
                         <p class="comentarios-card__nome">Paula Macedo</p>
                     </header>
                     <small class="comentarios-card__small">“Meu site ficou moderno, rápido e muito mais atrativo.”</small>
                 </article>
-
             </div>
         </section>
-
-        
     </main>
+
     <footer class="footer">
-        <p>&copy; Desenvolvido por Augusto Silveira</p>
+        <div class="footer__content">
+            <p>&copy; Desenvolvido por Augusto Silveira | Agência Criativa Web</p>
+            <p>Endereço: Av. Tecnológica, 1000 - São Paulo, SP | Tel: (11) 99999-9999 | E-mail: contato@agenciacriativaweb.com.br</p>
+        </div>
     </footer>
 </body>
 </html>
